@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        font-size: 11px;
+      }
+      #container {
+        min-width: 1020px;
+      }
+      .top-bar {
+        background-color: #f0f0f0;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        height: 32px;
+        overflow: hidden;
+      }
+      .top-bar > section {
+        width: 1020px;
+        margin: 0 auto;
+      }
+      .vender {
+        float: left;
+      }
+      .user {
+        float: right;
+      }
+      .vender > li {
+        display: inline-block;
+        height: 36px;
+        padding: 10px 0px 0px 12px;
+        box-sizing: border-box;
+      }
+      .vender > li > a {
+        display: block;
+      }
+      .user > li {
+        display: inline-block;
+        height: 36px;
+        padding: 10px 0px 0px 12px;
+        box-sizing: border-box;
+      }
+      .user > li > a {
+        display: block;
+      }
+      /* top-bar 끝 */
+      #header {
+        width: 1020px;
+        padding-top: 32px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      #header > section {
+        position: absolute;
+        width: 880px;
+        height: 91px;
+        margin: 25px 0px 0px 140px;
+        float: right;
+      }
+      .category-btn {
+        width: 110px;
+        height: 115px;
+        margin-right: 30px;
+        background-image: url(img/2.png);
+        float: left;
+      }
+      .category-btn > a {
+        display: block;
+        margin-top: 73px;
+        width: 110px;
+        font-size: 13px;
+        color: white;
+        text-align: center;
+      }
+      .logo {
+        width: 174px;
+        height: 41px;
+        margin: 10px;
+      }
+      .head-menu {
+        display: flex;
+      }
+      .search-bar {
+        display: flex;
+        width: 520px;
+        height: 40px;
+        box-sizing: border-box;
+      }
+      .search-bar > input {
+        display: block;
+      }
+      .search-bar:first-child {
+        width: 140px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="combine-header">
+      <!-- header -->
+      <header id="header">
+        <div class="category-btn">
+          <a href="#">카테고리</a>
+        </div>
+        <section>
+          <div class="head-menu">
+            <img class="logo" src="img/logo_coupang_w350.png" />
+            <div class="search-bar">
+              <input type="text" placeholder="전체" />
+              <input type="text" placeholder="찾고 싶은 상품을 검색해보세요!" />
+            </div>
+          </div>
+        </section>
+      </header>
+      <!-- top-bar -->
+      <article class="top-bar">
+        <section>
+          <div class="vender">
+            <li><a href="#">즐겨찾기</a></li>
+            <li><a href="#">입점신청</a></li>
+          </div>
+          <div class="user">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">고객센터</a></li>
+          </div>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

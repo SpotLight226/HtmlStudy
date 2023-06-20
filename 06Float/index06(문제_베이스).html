@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .wrap {
+        width: 1020px;
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      .content {
+        overflow: hidden;
+      }
+      .list-wrap {
+        width: 480px;
+        float: left;
+        border: 1px solid #777;
+      }
+      .list-wrap > ul {
+        overflow: hidden;
+      }
+      .list-wrap > ul > li {
+        width: 33.3333%;
+        height: 155px;
+        border: 1px solid #777;
+        box-sizing: border-box;
+        float: left;
+      }
+      .slide-wrap {
+        width: 236px;
+        float: left;
+        border: 1px solid #777;
+        height: 310px;
+        margin-left: 8px;
+      }
+      .user-wrap {
+        width: 280px;
+        float: left;
+        border: 1px solid #777;
+        height: 310px;
+        margin-left: 8px;
+      }
+      .user_inter {
+        height: 155px; /* 전체 크기를 벗어나지 않게 픽셀로 지정 */
+        border: 1px solid #777;
+        padding: 45px 20px;
+        box-sizing: border-box;
+      }
+      .user_content {
+        width: 240px;
+        margin: 0 auto;
+      }
+      .user_text {
+        margin-bottom: 10px;
+
+        overflow: hidden;
+      }
+      .user_text > p {
+        font-size: 11px;
+        color: #999;
+      }
+      .user_text .left {
+        float: left;
+      }
+      .user_text .right {
+        float: right;
+      }
+      .btn {
+        width: 100%;
+        background-color: #4bc755;
+        border: none;
+        color: white;
+        padding: 10px 0px;
+        font-size: 15px;
+      }
+      .promotion {
+        height: 145px;
+        margin-top: 10px;
+        border: 1px solid #777;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="wrap">
+        <div class="content">
+          <div class="list-wrap">
+            <!-- 왼 -->
+            <ul>
+              <li>사진</li>
+              <li>사진</li>
+              <li>사진</li>
+              <li>사진</li>
+              <li>사진</li>
+              <li>사진</li>
+            </ul>
+          </div>
+          <div class="slide-wrap">
+            <!-- 가운데 -->
+            이미지....
+          </div>
+          <div class="user-wrap">
+            <!-- 오른쪽 -->
+            <div class="user_inter">
+              <div class="user_content">
+                <div class="user_text">
+                  <p class="left">멜론을 더 안전하게 이용하세요</p>
+                  <p class="right">회원가입</p>
+                </div>
+                <button class="btn">로그인</button>
+              </div>
+            </div>
+            <div class="promotion">프로모션 영역...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

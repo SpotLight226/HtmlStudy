@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        border: 1px solid #777;
+        width: 500px;
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+      }
+      .profile {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+      .profile img {
+        width: 50px;
+      }
+      .content {
+        padding-left: 60px;
+      }
+      .content textarea {
+        width: 100%; /* 부모영역만큼 채운다  -> px로 잡지말고 이렇게*/
+        box-sizing: border-box;
+        resize: vertical; /* 사이즈가 바뀌는 것이 수직만 적용 */
+        min-height: 100px; /* 최소 크기가 100px */
+      }
+      .control {
+        overflow: hidden;
+      }
+      .control .left {
+        float: left;
+      }
+      .control .left input {
+        display: block;
+        width: 100px;
+      }
+      .control .left input:nth-child(2) {
+        margin-top: 3px;
+      }
+      .control .right {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="profile">
+        <img src="img/bgimg.png" alt="" />
+      </div>
+
+      <div class="content">
+        <textarea></textarea>
+        <div class="control">
+          <div class="left">
+            <input type="text" />
+            <input type="text" />
+          </div>
+          <button class="right">등록하기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

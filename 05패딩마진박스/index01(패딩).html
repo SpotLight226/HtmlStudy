@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p {
+        /*
+        border-left: 1px solid #777;
+        border-right: 1px solid #777;
+        border-bottom: 1px solid #777;
+        border-top: 1px solid #777;
+        border-radius: 1px 5px 50px 100px;  왼쪽부터 시계방향으로 적용된다
+        border-radius: 100px 100px 5px 5px; 1개 적으면 전부 다, 4개 - 시계방향
+
+        */
+
+        border: 1px solid #777;
+        width: 500px;
+        height: 100px;
+        background-color: teal;
+
+        /* padding: 10px; */ /* 전부 */
+        /* padding: 10px 20px; */ /* 상하, 좌우 */
+        /* padding: 10px 20px 30px; */ /* 상, 하, 좌우 */
+        /* padding: 10px 20px 30px 40px; */ /* 상, 우, 하, 좌 => 위에서부터 시계방향 */
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        padding-left: 40px; /* 위의 한 줄과 똑같다 => 한번에 다 쓰는 방식을 기억 */
+        /* 계산법 : width(500) + padding right(20) + padding left(40) + border(1) * 2 = 562 */
+        /*         height(100) + padding top(10) + padding bottom(30) + border(1)* 2  = 142 */
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      패딩은 안쪽 여백이다<br />
+      박스의 크기 = width + padding + border 패딩은 겹치지 않는다
+    </p>
+  </body>
+</html>

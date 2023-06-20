@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p {
+        width: 500px;
+        height: 100px;
+        border: 1px solid #777;
+        background-color: aquamarine;
+
+        /* 태그들은 자동으로 margin을 가지고 있다 */
+        /* margin: 10px; */ /* 상하좌우 */
+        /* margin: 20px 40px; */ /* 상하, 좌우 */
+        /* margin: 10px 20px 30px; */ /* 상, 좌우, 하 */
+        margin: 50px 20px 50px 40px; /* 위부터 시계방향 상, 우, 하, 좌 */
+      }
+      .box {
+        /* 상자의 너비가 반드시 지정이 되어야 함 */
+        margin: 0 auto; /* 상자를 화면의 가운데로 */
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      마진은 바깥여백 이다<br />
+      상자간 거리를 넓힐 때<br />
+      마진은 겹친다
+    </p>
+
+    <!-- text-align = 박스안의 글자를 가운데로 보낼 때 사용 -->
+    <p class="box" style="text-align: center">
+      마진은 바깥여백 이다<br />
+      상자간 거리를 넓힐 때<br />
+      마진은 겹친다
+    </p>
+  </body>
+</html>

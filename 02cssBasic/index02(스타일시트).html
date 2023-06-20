@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 외부스타일시트 -->
+    <link rel="stylesheet" href="index02.css" />
+
+    <!-- css는 계층적 언어로 마지막에 적용된 스타일이 적용된다 -->
+    <!-- 내부스타일시트 -->
+    <style>
+      p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 모든 태그는 style를 가진다 -->
+    <!-- 인라인시트 : 최우선 -->
+    <p style="color: yellowgreen">안녕하세요</p>
+    <p style="color: yellowgreen">안녕하세요</p>
+    <p style="color: yellowgreen">안녕하세요</p>
+  </body>
+</html>

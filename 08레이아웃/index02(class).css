@@ -1,0 +1,135 @@
+@import url("reset.css");
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+}
+
+header .social {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  overflow: hidden;
+}
+
+header .social li {
+  float: left;
+  width: 32px;
+  height: 32px;
+  /* 글자를 다른 곳으로 날린다 => 글자 없으면 크기 지정 못 함 */
+  text-indent: -9999px;
+  background-image: url(img/social.png);
+}
+/* ul.social => social이라는 클래스인 ul*/
+header .social li:nth-child(2) {
+  background-position: -32px;
+}
+header .social li:nth-child(3) {
+  background-position: -64px;
+}
+header .social li:last-child {
+  background-position: -96px;
+}
+
+header h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+header .login_menu {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  overflow: hidden;
+}
+
+header .login_menu li {
+  float: left;
+  padding-left: 30px;
+}
+header .login_menu li a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #555;
+}
+
+header nav .main_menu {
+  margin-top: 30px;
+  text-align: center;
+}
+header nav .main_menu > li {
+  display: inline-block;
+}
+header nav .main_menu > li > a {
+  display: block;
+  padding: 20px 30px;
+  color: #555;
+  text-decoration: none;
+  background-size: cover;
+}
+/* 아티클 영역*/
+#main_article {
+  margin-top: 155px;
+  height: 500px;
+  /* 이미지를 바로 넣는 것이 아니라 백그라운드로 */
+  background-image: url("img/main.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: 3px solid red;
+  /* background-attachment: fixed; */
+  text-align: center;
+}
+
+#main_article > h3 {
+  font-size: 50px;
+  color: #fff;
+  margin-top: 30px;
+  padding-top: 50px;
+}
+
+#main_article > p {
+  font-size: 25px;
+  color: #fff;
+  padding-top: 20px;
+}
+
+/* 메인영역 */
+#main_section > .title {
+  border-bottom: 3px dashed #ddd;
+  padding: 5px 0px;
+  font-size: 15px;
+  color: #555;
+  text-align: center;
+}
+
+#main_section > .box_list {
+  text-align: center;
+}
+#main_section > .box_list > li {
+  display: inline-block;
+  padding: 30px;
+}
+
+#main_section > .box_list > li > h3 {
+  color: #ddd;
+}
+
+#main_footer {
+  overflow: hidden;
+  border-top: 1px solid #ddd;
+  padding: 10px 20px;
+  margin-top: 150px;
+}
+
+#main_footer > .left {
+  float: left;
+}
+
+#main_footer > .right {
+  float: right;
+}

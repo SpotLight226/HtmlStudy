@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* 디자인을 시작하기 전에 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      /* 이렇게 설정하고 시작하면 편하다 */
+      .menu_box {
+        background-color: black;
+        text-align: center;
+      }
+      .menu_container > li {
+        display: inline-block;
+        /* 마우스가 닿을 때 간격이 커지는 것 해결 방안 2개 */
+        /* height: 64px; */ /* 1번, li의 높이를 넉넉하게 주어서 움직이지 않게 한다*/
+      }
+      .menu_container > li > a {
+        display: block;
+        /* line-height: 50px; */
+        padding: 20px 10px;
+        text-decoration: none;
+        color: white;
+        /* 2번, a의 길이를 정하고, border-box로 지정하여 테두리를 박스에 포함시킨다 */
+        height: 60px;
+        box-sizing: border-box;
+      }
+      .menu_container > li > a:hover {
+        border-bottom: 3px solid white;
+      }
+      .img_container {
+        margin-bottom: 80px;
+      }
+      .list_container {
+        width: 1080px;
+        margin: 0 auto;
+      }
+      .list_container > .a1 {
+        border: 1px solid black;
+        height: 200px;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu_box">
+      <ul class="menu_container">
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+      </ul>
+    </nav>
+
+    <div class="img_container">
+      <img src="img/1.jpg" />
+    </div>
+    <section>
+      <div class="list_container">
+        <h3>오늘의 발견</h3>
+        <div class="a1">
+          할일목록...<br />
+          할일목록...<br />
+          할일목록...<br />
+          할일목록...<br />
+          할일목록...<br />
+          할일목록...<br />
+          할일목록...<br />
+          할일목록...<br />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

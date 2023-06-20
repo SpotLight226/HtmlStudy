@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        width: 550px;
+        height: 360px;
+        padding: 10px;
+        border: 1px solid black;
+        margin: 0 auto;
+        position: relative;
+      }
+      .img-container {
+        position: absolute;
+        top: 10px;
+      }
+      .content {
+        padding-left: 110px;
+        float: right;
+      }
+      textarea {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 5px;
+        box-sizing: border-box;
+      }
+      .check-box {
+        display: inline-block;
+        overflow: hidden;
+        width: 430px;
+      }
+      .small-text input {
+        display: block;
+      }
+      .check-box .small-text {
+        float: left;
+      }
+      .check-box button {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="img-container">
+        <img src="img/bgimg.png" />
+      </div>
+      <div class="content">
+        <textarea></textarea>
+        <div class="check-box">
+          <div class="small-text">
+            <input type="text" />
+            <input type="text" />
+          </div>
+          <button>등록하기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

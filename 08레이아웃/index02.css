@@ -1,0 +1,138 @@
+@import url("reset.css");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* header */
+#main_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+#main_header .header_top .title {
+  text-align: center;
+  padding-top: 20px;
+}
+.header_top .social {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  overflow: hidden;
+  display: block;
+}
+
+.social li {
+  width: 32px;
+  height: 32px;
+  float: left;
+  text-indent: -9999px;
+  background-image: url(img/social.png);
+}
+
+.social li:nth-child(2) {
+  background-position: -32px;
+}
+.social li:nth-child(3) {
+  background-position: -64px;
+}
+.social li:last-child {
+  background-position: -96px;
+}
+.header_top .login_menu {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  overflow: hidden;
+}
+.header_top .login_menu li {
+  float: left;
+}
+.header_top .login_menu li a {
+  font-size: 12px;
+  padding-left: 30px;
+  color: #555;
+}
+
+.main_menu {
+  margin-top: 30px;
+  text-align: center;
+  overflow: hidden;
+}
+.main_menu > li {
+  display: inline-block;
+}
+.main_menu > li > a {
+  display: block;
+  padding: 20px 30px;
+  color: #555;
+  cursor: pointer;
+}
+
+/* main_section */
+
+#main {
+  margin-top: 170px;
+  border-top: 3px solid red;
+  height: 500px;
+  background-image: url(img/main.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#main div {
+  color: white;
+  text-align: center;
+  line-height: 80px;
+}
+
+#main div:first-child {
+  font-size: 50px;
+  padding-top: 100px;
+  letter-spacing: 15px;
+}
+#main div:nth-child(2) {
+  font-size: 30px;
+}
+
+#list h2 {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0;
+  border-bottom: 3px dashed #ddd;
+  box-sizing: border-box;
+}
+
+.list_container {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 100px 0;
+}
+
+.list_container article {
+  display: inline-block;
+  padding: 40px;
+}
+#list article h3 {
+  color: #ddd;
+}
+
+#main_footer {
+  border-top: 2px solid #ddd;
+  overflow: hidden;
+  padding: 0px 20px;
+  line-height: 40px;
+}
+
+#main_footer .left {
+  float: left;
+  font-size: 14px;
+}
+
+#main_footer .right {
+  float: right;
+  font-size: 14px;
+}
