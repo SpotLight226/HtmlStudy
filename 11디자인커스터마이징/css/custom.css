@@ -1,0 +1,216 @@
+/* 디자인 시작전에 공통적으로 선언 */
+/* 1. 폰트 */
+
+body,
+html {
+  font-family: "Orbit", sans-serif;
+}
+/* 마진, 패딩 0 , border-box*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+li,
+ol,
+dd,
+dl {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  /* 브라우저 별로 기본디자인을 제거해서 동일한 디자인으로 보여질 수 있게 선언 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none; /* 디자이너는 경계선을 없애고 시작한다 -> border속성 모르면 그냥 넘어감 */
+}
+/* 둥근 경계를 없앤다 */
+/* 모든 form-control, btn에 적용 */
+.form-control {
+  border-radius: 0;
+}
+.btn {
+  border-radius: 0;
+}
+
+/* ####################header####################### */
+/* .navbar-inverse {}  임시로 디자인 적용*/
+
+/* my-nav 클래스를 선언해서 바꾸고자하는 스타일에 덮어씌운다 */
+.my-header {
+  /* 헤더의 포지션을 고정 */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* z-index를 추가해서 헤더를 가장 높이 잡는다 */
+  z-index: 50;
+}
+.my-nav {
+  background-color: #263238;
+  border: none;
+  border-radius: 0;
+  /* 마진을 0으로 */
+  margin: 0;
+}
+/* 개발자 도구에서 확인한 경로대로 작성한다 */
+.my-nav .navbar-nav > li > a {
+  color: #fff;
+}
+.my-nav .navbar-nav > li > a:hover {
+  background-color: #222;
+}
+.my-nav .navbar-brand {
+  padding: 0 20px;
+}
+.my-nav .navbar-brand img {
+  height: 50px;
+}
+
+/* ##################article#####################3 */
+.my-article {
+  margin-top: 50px;
+}
+
+.carousel-control.right {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.carousel-control.left {
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* ####################section#################### */
+/* 각 박스에 padding을 5씩 */
+.prod-list {
+  padding: 5px;
+  border: 1px solid #777;
+}
+.prod-list > li {
+  padding: 5px;
+}
+
+.prod-link {
+  display: block;
+  border: 1px solid #777;
+  text-align: center;
+  position: relative;
+}
+
+.prod-link > .arrow {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #fff;
+  background-color: #ddd;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+.prod-link > .hover {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #fff;
+  background-color: #4285f4;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  opacity: 0; /* 투명도로 숨겨놓는다 */
+}
+
+.prod-link:hover > .arrow {
+  /* link에 마우스가 닿으면 회색 화살표를 투명도 0 */
+  opacity: 0;
+}
+.prod-link:hover > .hover {
+  opacity: 1;
+}
+.prod-link:hover {
+  border-color: #4285f4;
+}
+
+/* ##################section row##################### */
+
+.blog-wrap .blog-inner {
+  border: 1px solid #ddd;
+  font-size: 13px;
+  position: relative;
+}
+.blog-wrap .blog-content {
+  text-align: center;
+  padding: 15px;
+}
+.blog-wrap .blog-content > p {
+  font-weight: 800;
+  font-size: 13px;
+  /* 글자 수가 많아도 다 들어가게 길이 고정 */
+  height: 60px;
+  /* 글자 수 많아져도 크기 안 변하게 */
+  overflow: hidden;
+}
+
+.blog-content > .blog-info {
+  overflow: hidden;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.blog-content > .blog-info > .left {
+  float: left;
+  overflow: hidden;
+}
+.blog-content > .blog-info > ul.left > li {
+  float: left;
+  color: #fdcc11;
+}
+.blog-content > .blog-info > .right {
+  float: right;
+}
+
+.blog-wrap .blog-inner > .blog-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  opacity: 0;
+  text-align: center;
+}
+.blog-wrap .blog-inner > .blog-hover > a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
+}
+
+.blog-wrap .blog-inner:hover > .blog-hover {
+  opacity: 1;
+}
+
+@media (min-width: 1200px) {
+  /* blog-wrap에 col-lg-2가 선언되어있다면 */
+  /* 딱 붙여쓴다 */
+  .blog-wrap.col-lg-2 {
+    width: 20%;
+  }
+}
