@@ -1,0 +1,51 @@
+/* 디자인 시작전에 공통적으로 선언 */
+/* 1. 폰트 */
+
+body,
+html {
+  font-family: "Noto Sans KR", sans-serif;
+}
+/* 마진, 패딩 0 , border-box*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+li,
+ol,
+dd,
+dl {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  /* 브라우저 별로 기본디자인을 제거해서 동일한 디자인으로 보여질 수 있게 선언 */
+  /* 이 설정이 들어가면 checkbox가 없어진다 -> 디자이너는 없앤 후 백그라운드로 check를 잡는다 */
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+  border: none; /* 디자이너는 경계선을 없애고 시작한다 -> border속성 모르면 그냥 넘어감 */
+}
+/* 둥근 경계를 없앤다 */
+/* 모든 form-control, btn에 적용 */
+.form-control {
+  border-radius: 0;
+}
+.btn {
+  border-radius: 0;
+}
+
+.form-control:focus {
+  border-color: #222;
+  box-shadow: none;
+}

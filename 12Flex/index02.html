@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        /* flex-direction: row; 기본 값 */
+        flex-direction: column; /* justify-content는 주축에 따라서 정렬이 바뀜 */
+
+        justify-content: center; /* 기본값 : flex-start */
+        /* space-betwee : 양 끝으로 딱 붙이고 동일한 간격 */
+        /* space-around : 모두 동일한 간격 */
+        /* center : 중앙으로 모은다 */
+        /* flex-end : 끝에서부터 정렬 */
+
+        background-color: yellowgreen;
+        padding: 20px;
+        height: 500px; /* height를 주면 확실하게 알 수 있다 */
+      }
+
+      .container .item {
+        background-color: tomato;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>justify-content : 주축정렬</h3>
+
+    <div class="container">
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+    </div>
+
+    <hr />
+
+    <style>
+      .container2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* 줄 바꿈 허용 */
+        /* 교차축 정렬 (2줄 이상일 때) */
+        align-content: flex-start; /* container의 가장 위에 붙는다 */
+        align-content: flex-end; /* container의 가장 밑에 붙는다 */
+        align-content: center; /* 가운데 정렬 */
+        align-content: space-between; /* 양 끝 붙이고 균등 간격 */
+        align-content: space-around; /* 균등 간격 */
+
+        background-color: yellowgreen;
+        padding: 20px;
+        height: 500px;
+      }
+
+      .container2 .item {
+        background-color: tomato;
+        margin: 10px;
+      }
+    </style>
+
+    <h3>align-content : 교차축 정렬 (2 줄 일때)</h3>
+
+    <div class="container2">
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+    </div>
+
+    <hr />
+
+    <style>
+      .container3 {
+        display: flex;
+        /* 교차축 정렬 (한줄 일때) */
+        align-items: stretch; /* default */
+        align-items: flex-start; /* 가장 위 정렬 */
+        align-items: flex-end; /* 가장 밑 정렬 */
+        align-items: center; /* 가운데 정렬 */
+        /* 한 줄 이라서 spacebetween이 없다 */
+        align-items: baseline; /* 글자 기준으로 교차축 정렬을 맞춤 */
+
+        background-color: yellowgreen;
+        padding: 20px;
+        height: 500px;
+      }
+
+      .container3 .item {
+        background-color: tomato;
+        margin: 10px;
+      }
+    </style>
+
+    <h3>align-items : 교차축 정렬 (1 줄 일 때)</h3>
+
+    <div class="container3">
+      <div class="item" style="height: 50px; line-height: 50px">flex</div>
+      <div class="item">flex</div>
+      <div class="item">flex</div>
+    </div>
+
+    <hr />
+
+    <h3>박스를 정 가운데로</h3>
+
+    <style>
+      .box {
+        /* 정 가운데로 보내려면 크기가 있어야 한다 */
+        background-color: lightpink;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center; /* 주축 정렬 */
+        align-items: center; /* 교차축 1줄 */
+      }
+      .box > div {
+        background-color: tomato;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+
+    <div class="box">
+      <div>정 가운데로</div>
+    </div>
+  </body>
+</html>
